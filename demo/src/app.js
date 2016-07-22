@@ -298,5 +298,3 @@ import obj4 from "modules/module-4";
 import obj3 from "modules/module-3";
 import obj2 from "modules/module-2";
 import obj1 from "modules/module-1";
-import steal from "@steal";
-steal.done().then(() => console.timeEnd("steal"));

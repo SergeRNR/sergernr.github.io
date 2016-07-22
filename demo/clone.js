@@ -12,8 +12,8 @@ while (count > 0) {
     count--;
 }
 
-result.push('import steal from "@steal";');
-result.push('steal.done().then(() => console.timeEnd("steal"));');
+// result.push('import steal from "@steal";');
+// result.push('steal.done().then(() => console.timeEnd("steal"));');
 
 fs.writeFile(
     'src/app.js',
