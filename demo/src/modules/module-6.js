@@ -1,1 +1,0 @@
-export default {name: "module6"};
