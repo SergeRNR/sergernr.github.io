@@ -1,1 +1,19 @@
-FLIGHTS
+<form name="carsForm" novalidate>
+    <fieldset>
+        <legend>CARS</legend>
+        <div class="form-group">
+            <label for="type">TYPE</label>
+            <select ng-model="form.carType" class="form-control">
+                <option value="economy">ECONOMY</option>
+                <option value="suv">SUV</option>
+                <option value="luxury">LUXURY</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="location">LOCATION</label>
+            <input type="text" ng-model="form.location" class="form-control" placeholder="LOCATION">
+        </div>
+        <button type="reset" ng-click="$ctrl.reset()" class="btn btn-default">CLEAR</button>
+        <button type="submit" ng-click="$ctrl.update(form)" class="btn btn-default">SEARCH</button>
+    </fieldset>
+</form>
