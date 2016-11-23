@@ -10,7 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
     "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0"
   }
 }

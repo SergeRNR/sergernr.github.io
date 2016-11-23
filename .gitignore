@@ -1,2 +1,4 @@
-/demo/src/modules/*
+/**/node_modules/*
+/**/dist/*
+
 /demo/node_modules/*
