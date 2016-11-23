@@ -9,11 +9,17 @@ const DIST_FOLDER = './dist';
 
 const vendorJs = [
     './node_modules/angular/angular.js',
-    './node_modules/angular-ui-router/release/angular-ui-router.js'
+    './node_modules/angular-ui-router/release/angular-ui-router.js',
+    // './node_modules/bootstrap/dist/js/bootstrap.min.js'
 ];
 const appJs = [
-    'src/app/*.js',
+    'src/app/*.module.js',
+    'src/app/*.routes.js',
     'src/app/components/**/*.js'
+];
+const vendorAssets = [
+    './node_modules/bootstrap/dist/**/bootstrap.min.css',
+    './node_modules/bootstrap/dist/**/glyphicons*.*',
 ];
 
 // SCRIPTS
@@ -52,12 +58,18 @@ gulp.task(
 );
 
 gulp.task(
+    'copy:assets:vendor',
+    () => gulp.src(vendorAssets)
+        .pipe(gulp.dest(`${DIST_FOLDER}/assets/`))
+);
+
+gulp.task(
     'copy:html',
     () => gulp.src('src/*.html')
         .pipe(gulp.dest(`${DIST_FOLDER}/`))
 );
 
-gulp.task('copy', ['copy:assets', 'copy:html']);
+gulp.task('copy', ['copy:assets', 'copy:assets:vendor', 'copy:html']);
 
 // DIST
 

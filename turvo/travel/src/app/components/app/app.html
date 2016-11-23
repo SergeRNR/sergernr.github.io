@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="col-md-4">
+        <ul>
+            <li ng-repeat="item in app.filterTypes">
+                <a ui-sref="app.{{item.type}}">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div ui-view class="col-md-8"></div>
+</div>
