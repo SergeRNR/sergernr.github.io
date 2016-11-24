@@ -1,6 +1,5 @@
 angular.module('TA')
 .factory('historyService', ['localStorageService', (localStorageService) => {
-
     const HISTORY_KEY = 'ta-history';
     let history;
 
@@ -13,7 +12,7 @@ angular.module('TA')
 
     let add = (data) => {
         let list = get();
-        list.push(data);
+        list.push(angular.copy(data));
         localStorageService.set(HISTORY_KEY, list);
     };
 

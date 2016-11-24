@@ -3,58 +3,28 @@ angular.module('TA')
     'filterTypes',
     'historyService',
     function (filterTypes, historyService) {
-        let history = [
-            {
-                id: 1479999738239,
-                type: 'flights',
-                startDate: '2016-12-08T14:55:54.171Z',
-                endDate: '2016-12-11T14:55:54.171Z',
-                from: 'Madrid',
-                to: 'Rio'
-            },
-            {
-                id: 1479999738240,
-                type: 'hotels',
-                startDate: '2016-12-22T14:55:54.171Z',
-                endDate: '2016-12-28T14:55:54.171Z',
-                amenities: 4,
-                location: 'Milan'
-            },
-            {
-                id: 1479999738241,
-                type: 'cars',
-                startDate: '2016-11-26T14:55:54.171Z',
-                endDate: '2016-11-28T14:55:54.171Z',
-                carType: 'suv',
-                location: 'NY'
-            }
-        ];
-
         // INITIAL STATE
         this.filterTypes = filterTypes;
-        this.activeType = filterTypes[0].type;
 
-        this.formData = {
+        this.defaultFormData = {
             startDate: new Date(),
             endDate: new Date()
         };
-        this.form = angular.copy(this.formData);
+        this.form = angular.copy(this.defaultFormData);
 
-        // FORM PROCESSING
         this.setActiveType = (type) => {
             this.activeType = type;
         };
 
+        // FORM PROCESSING
         this.search = (form) => {
-            if (form) {
-                console.log(form);
-                // historyService.add(form);
-            }
-            history.forEach(record => historyService.add(record))
+            form.id = Date.now();
+            form.type = this.activeType;
+            historyService.add(form);
         };
 
         this.reset = () => {
-            this.form = angular.copy(this.formData);
+            this.form = angular.copy(this.defaultFormData);
         };
 
         // HISTORY

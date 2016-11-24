@@ -16,6 +16,7 @@ const vendorJs = [
 const appJs = [
     'src/app/*.module.js',
     'src/app/*.routes.js',
+    'src/app/filters/**/*.js',
     'src/app/services/**/*.js',
     'src/app/components/**/*.js'
 ];

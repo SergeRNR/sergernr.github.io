@@ -1,6 +1,5 @@
 angular.module('TA')
 .factory('localStorageService', ['$window', ($window) => {
-
     let get = (key) => {
         let value = $window.localStorage.getItem(key);
         try {

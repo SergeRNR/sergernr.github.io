@@ -12,7 +12,6 @@
     <div class="col-md-9">
         <form name="form" class="ta-form" novalidate>
             <fieldset>
-                <!-- <legend>SEARCH</legend> -->
                 <div class="form-group">
                     <label for="start_date">START DATE</label>
                     <input type="date" ng-model="app.form.startDate" class="form-control" placeholder="START DATE">
@@ -40,7 +39,7 @@
 
         <hr/>
         <h4>PREVIOUS SEARCHES</h4>
-        <div class="ta-history" ng-repeat="record in app.history">
+        <div class="ta-history" ng-repeat="record in app.history track by $index">
             <span class="glyphicon glyphicon-info-sign"></span>
             <span>{{record.startDate | date:'MMM dd'}} &ndash; {{record.endDate | date:'MMM dd'}}, </span>
             <span ng-include="app.getHistoryTemplate(record)"></span>
