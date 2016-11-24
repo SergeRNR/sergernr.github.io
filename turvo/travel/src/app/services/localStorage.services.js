@@ -1,5 +1,6 @@
 angular.module('TA')
 .factory('localStorageService', ['$window', ($window) => {
+
     let get = (key) => {
         let value = $window.localStorage.getItem(key);
         try {
@@ -19,15 +20,8 @@ angular.module('TA')
         }
     };
 
-    let push = (key, value) => {
-        let arr = get(key) || [];
-        arr.push(value);
-        set(key, arr);
-    };
-
     return {
         get,
-        set,
-        push
+        set
     };
 }]);

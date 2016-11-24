@@ -1,0 +1,10 @@
+.container {
+    padding-top: 77px;
+}
+.ta-form .ta-required {
+    top: 0;
+    color: #ca0000;
+}
+.ta-history-remove {
+    cursor: pointer;
+}

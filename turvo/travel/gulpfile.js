@@ -10,6 +10,7 @@ const DIST_FOLDER = './dist';
 const vendorJs = [
     './node_modules/angular/angular.js',
     './node_modules/angular-ui-router/release/angular-ui-router.js',
+    // './node_modules/jquery/dist/jquery.min.js',
     // './node_modules/bootstrap/dist/js/bootstrap.min.js'
 ];
 const appJs = [
@@ -103,6 +104,7 @@ gulp.task(
         gulp.watch('src/app/**/*.js', ['js:app']);
         gulp.watch('src/app/**/*.html', ['templates']);
         gulp.watch('src/*.html', ['copy:html']);
+        gulp.watch('src/assets/**/*.*', ['copy:assets']);
         gulp.watch('dist/**', ['reload']);
     }
 );
