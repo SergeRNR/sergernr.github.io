@@ -10,7 +10,9 @@
 <div class="form-group">
     <label for="location">LOCATION</label>
     <div class="input-group">
-        <input type="text" ng-model="app.form.location" class="form-control" placeholder="LOCATION">
-        <span class="input-group-addon glyphicon glyphicon-asterisk ta-required"></span>
+        <input type="text" name="location" ng-model="app.form.location" class="form-control" placeholder="LOCATION" required>
+        <span class="input-group-addon glyphicon glyphicon-asterisk ta-required"
+            ng-class="{'ta-valid': filterForm.location.$valid}">
+        </span>
     </div>
 </div>

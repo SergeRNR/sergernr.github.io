@@ -5,6 +5,9 @@
     top: 0;
     color: #ca0000;
 }
+.ta-form .ta-required.ta-valid {
+    color: #5cb85c;
+}
 .ta-history-remove {
     cursor: pointer;
 }
