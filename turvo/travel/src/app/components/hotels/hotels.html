@@ -1,20 +1,13 @@
-<form name="hotelsForm" novalidate>
-    <fieldset>
-        <legend>HOTELS</legend>
-        <div class="form-group">
-            <label for="amenities">AMENITIES</label>
-            <select ng-model="form.amenities" class="form-control">
-                <option value="5">5</option>
-                <option value="4">4</option>
-                <option value="3">3</option>
-                <option value="2">2</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="location">LOCATION</label>
-            <input type="text" ng-model="form.location" class="form-control" placeholder="LOCATION">
-        </div>
-        <button type="reset" class="btn btn-default">CLEAR</button>
-        <button type="submit" class="btn btn-default">SEARCH</button>
-    </fieldset>
-</form>
+
+<div class="form-group">
+    <label for="amenities">AMENITIES</label>
+    <select ng-model="app.form.amenities" class="form-control">
+        <option ng-repeat="option in hotels.options" value="{{option.value}}">
+            {{option.name}}
+        </option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="location">LOCATION</label>
+    <input type="text" ng-model="app.form.location" class="form-control" placeholder="LOCATION">
+</div>

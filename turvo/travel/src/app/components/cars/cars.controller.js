@@ -1,4 +1,18 @@
 angular.module('TA')
-.controller('CarsController', [function () {
-    console.log('CarsController init');
+.controller('CarsController', ['filterType', function (filterType) {
+    this.filterType = filterType;
+    this.options = [
+        {
+            name: 'ECONOMY',
+            value: 'economy'
+        },
+        {
+            name: 'SUV',
+            value: 'suv'
+        },
+        {
+            name: 'LUXURY',
+            value: 'luxury'
+        }
+    ];
 }]);

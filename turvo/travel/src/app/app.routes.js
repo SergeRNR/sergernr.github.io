@@ -13,7 +13,10 @@ angular.module('TA')
         $stateProvider.state(`app.${item.type}`, {
             url: item.path,
             templateUrl: `components/${item.type}/${item.type}.html`,
-            controller: `${item.name}Controller as ${item.type}`
+            controller: `${item.name}Controller as ${item.type}`,
+            resolve: {
+                filterType: () => item.type
+            }
         });
     });
 

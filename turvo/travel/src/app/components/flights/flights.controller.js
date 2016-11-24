@@ -1,4 +1,4 @@
 angular.module('TA')
-.controller('FlightsController', [function () {
-    console.log('FlightsController init');
+.controller('FlightsController', ['filterType', function (filterType) {
+    
 }]);
