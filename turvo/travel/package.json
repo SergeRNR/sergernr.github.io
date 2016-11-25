@@ -11,8 +11,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.2",
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1"
+    "bootstrap": "^3.3.7"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
