@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('TA', ['ui.router', 'templates'])
+angular
+.module('TA', ['ui.router', 'templates'])
 // filters config
 .constant('filterTypes', [
     {

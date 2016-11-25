@@ -1,4 +1,5 @@
-angular.module('TA')
+angular
+.module('TA')
 .factory('historyService', ['localStorageService', (localStorageService) => {
     const HISTORY_KEY = 'ta-history';
     let history;
@@ -7,6 +8,7 @@ angular.module('TA')
         if (!history) {
             history = localStorageService.get(HISTORY_KEY) || [];
         }
+
         return history;
     };
 
@@ -21,6 +23,7 @@ angular.module('TA')
         let index = list.findIndex(record => record.id === id);
         list.splice(index, 1);
         localStorageService.set(HISTORY_KEY, list);
+
         return id;
     };
 

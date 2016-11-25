@@ -5,7 +5,7 @@
                 ng-repeat="item in app.filterTypes"
                 ng-class="item.type == app.activeType ? 'active' : ''">
 
-                <a ui-sref="app.{{item.type}}" ng-click="app.setActiveType(item.type)">{{item.name}}</a>
+                <a ng-click="app.setActiveType(item.type)">{{item.name}}</a>
             </li>
         </ul>
     </div>

@@ -1,8 +1,11 @@
-angular.module('TA')
+angular
+.module('TA')
 .controller('AppController', [
+    '$scope',
+    '$state',
     'filterTypes',
     'historyService',
-    function (filterTypes, historyService) {
+    function ($scope, $state, filterTypes, historyService) {
         // INITIAL STATE
         this.filterTypes = filterTypes;
 
@@ -12,8 +15,12 @@ angular.module('TA')
         };
         this.form = angular.copy(this.defaultFormData);
 
-        this.setActiveType = (type) => {
+        $scope.$on('activeType', (event, type) => {
             this.activeType = type;
+        });
+
+        this.setActiveType = (type) => {
+            $state.go(`app.${type}`);
         };
 
         // FORM PROCESSING

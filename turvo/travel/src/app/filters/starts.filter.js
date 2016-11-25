@@ -1,4 +1,5 @@
-angular.module('TA')
+angular
+.module('TA')
 .filter('stars', ['$sce', ($sce) => (count) => {
     let template = '<span class="glyphicon glyphicon-star"></span>';
     let result = [];

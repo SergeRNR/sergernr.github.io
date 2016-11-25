@@ -1,11 +1,10 @@
-angular.module('TA')
+angular
+.module('TA')
 .controller('CarsController', [
-    'filterType',
     '$scope',
-    function (filterType, $scope) {
-        $scope.$parent.app.activeType = filterType;
-        this.filterType = filterType;
-
+    'filterType',
+    function ($scope, filterType) {
+        $scope.$emit('activeType', filterType);
         this.options = [
             {
                 name: 'ECONOMY',

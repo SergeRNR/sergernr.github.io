@@ -1,9 +1,9 @@
-angular.module('TA')
+angular
+.module('TA')
 .controller('FlightsController', [
-    'filterType',
     '$scope',
-    function (filterType, $scope) {
-        $scope.$parent.app.activeType = filterType;
-        this.filterType = filterType;
+    'filterType',
+    function ($scope, filterType) {
+        $scope.$emit('activeType', filterType);
     }
 ]);

@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('TA', ['ui.router', 'templates'])
+angular
+.module('TA', ['ui.router', 'templates'])
 // filters config
 .constant('filterTypes', [
     {
@@ -20,7 +21,8 @@ angular.module('TA', ['ui.router', 'templates'])
     }
 ]);
 
-angular.module('TA')
+angular
+.module('TA')
 // routes config
 .config(($stateProvider, $urlRouterProvider, filterTypes) => {
 
@@ -45,7 +47,8 @@ angular.module('TA')
     $urlRouterProvider.otherwise(filterTypes.length ? filterTypes[0].path : '/');
 });
 
-angular.module('TA')
+angular
+.module('TA')
 .filter('stars', ['$sce', ($sce) => (count) => {
     let template = '<span class="glyphicon glyphicon-star"></span>';
     let result = [];
@@ -56,7 +59,8 @@ angular.module('TA')
     return $sce.trustAsHtml(result.join(''));
 }]);
 
-angular.module('TA')
+angular
+.module('TA')
 .factory('historyService', ['localStorageService', (localStorageService) => {
     const HISTORY_KEY = 'ta-history';
     let history;
@@ -65,6 +69,7 @@ angular.module('TA')
         if (!history) {
             history = localStorageService.get(HISTORY_KEY) || [];
         }
+
         return history;
     };
 
@@ -79,6 +84,7 @@ angular.module('TA')
         let index = list.findIndex(record => record.id === id);
         list.splice(index, 1);
         localStorageService.set(HISTORY_KEY, list);
+
         return id;
     };
 
@@ -89,7 +95,8 @@ angular.module('TA')
     };
 }]);
 
-angular.module('TA')
+angular
+.module('TA')
 .factory('localStorageService', ['$window', ($window) => {
     let get = (key) => {
         let value = $window.localStorage.getItem(key);
@@ -116,11 +123,14 @@ angular.module('TA')
     };
 }]);
 
-angular.module('TA')
+angular
+.module('TA')
 .controller('AppController', [
+    '$scope',
+    '$state',
     'filterTypes',
     'historyService',
-    function (filterTypes, historyService) {
+    function ($scope, $state, filterTypes, historyService) {
         // INITIAL STATE
         this.filterTypes = filterTypes;
 
@@ -130,8 +140,12 @@ angular.module('TA')
         };
         this.form = angular.copy(this.defaultFormData);
 
-        this.setActiveType = (type) => {
+        $scope.$on('activeType', (event, type) => {
             this.activeType = type;
+        });
+
+        this.setActiveType = (type) => {
+            $state.go(`app.${type}`);
         };
 
         // FORM PROCESSING
@@ -154,14 +168,13 @@ angular.module('TA')
     }
 ]);
 
-angular.module('TA')
+angular
+.module('TA')
 .controller('CarsController', [
-    'filterType',
     '$scope',
-    function (filterType, $scope) {
-        $scope.$parent.app.activeType = filterType;
-        this.filterType = filterType;
-
+    'filterType',
+    function ($scope, filterType) {
+        $scope.$emit('activeType', filterType);
         this.options = [
             {
                 name: 'ECONOMY',
@@ -179,24 +192,23 @@ angular.module('TA')
     }
 ]);
 
-angular.module('TA')
+angular
+.module('TA')
 .controller('FlightsController', [
-    'filterType',
     '$scope',
-    function (filterType, $scope) {
-        $scope.$parent.app.activeType = filterType;
-        this.filterType = filterType;
+    'filterType',
+    function ($scope, filterType) {
+        $scope.$emit('activeType', filterType);
     }
 ]);
 
-angular.module('TA')
+angular
+.module('TA')
 .controller('HotelsController', [
-    'filterType',
     '$scope',
-    function (filterType, $scope) {
-        $scope.$parent.app.activeType = filterType;
-        this.filterType = filterType;
-
+    'filterType',
+    function ($scope, filterType) {
+        $scope.$emit('activeType', filterType);
         this.options = [5, 4, 3, 2].map(count => ({
             name: `${count} stars`,
             value: count

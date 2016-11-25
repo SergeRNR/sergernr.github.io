@@ -1,4 +1,5 @@
-angular.module('TA')
+angular
+.module('TA')
 // routes config
 .config(($stateProvider, $urlRouterProvider, filterTypes) => {
 
