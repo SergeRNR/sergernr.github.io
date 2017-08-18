@@ -1,0 +1,18 @@
+
+<div class="form-group">
+    <label for="amenities">AMENITIES</label>
+    <select ng-model="app.form.amenities" class="form-control">
+        <option ng-repeat="option in hotels.options" value="{{option.value}}">
+            {{option.name}}
+        </option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="location">LOCATION</label>
+    <div class="input-group">
+        <input type="text" name="location" ng-model="app.form.location" class="form-control" placeholder="LOCATION" required>
+        <span class="input-group-addon glyphicon glyphicon-asterisk ta-required"
+            ng-class="{'ta-valid': filterForm.location.$valid}">
+        </span>
+    </div>
+</div>

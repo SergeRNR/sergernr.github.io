@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked ta-nav">
+            <li role="presentation"
+                ng-repeat="item in app.filterTypes"
+                ng-class="item.type == app.activeType ? 'active' : ''">
+
+                <a ng-click="app.setActiveType(item.type)">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <form name="filterForm" class="ta-form" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label for="start_date">START DATE</label>
+                    <input type="date" ng-model="app.form.startDate" class="form-control" placeholder="START DATE" required>
+                </div>
+                <div class="form-group">
+                    <label for="end_date">END DATE</label>
+                    <input type="date" ng-model="app.form.endDate" class="form-control" placeholder="END DATE" required>
+                </div>
+
+                <ui-view></ui-view>
+
+                <div class="form-group pull-right">
+                    <button type="button" class="btn btn-default" ng-click="app.reset()">
+                        CLEAR
+                    </button>
+                    <button type="submit" class="btn btn-success"
+                        ng-click="app.search(app.form)"
+                        ng-disabled="filterForm.$invalid">
+
+                        SEARCH
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+
+        <hr/>
+        <h4>PREVIOUS SEARCHES</h4>
+        <div class="ta-history" ng-repeat="record in app.history track by $index">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            <span>{{record.startDate | date:'MMM dd'}} &ndash; {{record.endDate | date:'MMM dd'}}, </span>
+            <span ng-include="app.getHistoryTemplate(record)"></span>
+            <span class="ta-history-remove glyphicon glyphicon-remove pull-right"
+                ng-click="app.removeHistoryRecord(record.id)">
+            </span>
+        </div>
+    </div>
+</div>
