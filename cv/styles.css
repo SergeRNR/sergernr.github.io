@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+body {
+    background-color: #efefef;
+    font-family: sans-serif;
+}
+
+/* GENERIC AND HELPER CLASSES */
+h3 {            font-size: 1.5rem; line-height: 3rem;}
+h4 {            font-size: 1.25rem; line-height: 2.5rem;}
+h5 {            font-weight: 600;}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.sm-mb {        margin-bottom: 8px;}
+.sm-mb-2 {      margin-bottom: 16px;}
+
+/* LAYOUT */
+.page {
+    display: flex;
+    max-width: 1024px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+aside {
+    min-width: 15rem;
+    background-color: #27276d;
+    color: white;
+}
+aside .section-title {
+    padding: 0 16px;
+    background-color: #1c1c54;
+}
+aside section {
+    padding: 16px;
+}
+
+main {
+    flex: auto;
+    color: #333;
+    padding: 16px;
+}
+main .section-title {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+main section {
+    padding: 16px 0;
+}
+
+section.two-column {
+    display: flex;
+}
+section .column-one {
+    min-width: 8rem;
+}
+section .column-two {
+    flex: auto;
+}
+
+/* MEDIA QUERIES */
+@media all and (min-width: 1024px) {
+    .page {
+        margin: 8px auto;
+        min-height: calc(100% - 16px);
+    }
+}
+
+@media all and (min-width: 768px) {
+
+}
