@@ -15,9 +15,6 @@ h4 {            font-size: 1.25rem; line-height: 2.5rem;}
 h5 {            font-weight: 600;}
 a {             text-decoration: none;}
 
-.sm-mb {        margin-bottom: 8px;}
-.sm-mb-2 {      margin-bottom: 16px;}
-
 /* LAYOUT */
 .page {
     display: flex;
@@ -114,7 +111,7 @@ section .column-two {
     }
 }
 
-/*@media all and (max-width: 768px) {
+@media all and (max-width: 768px) {
     .page {
         display: block;
     }
@@ -128,4 +125,4 @@ section .column-two {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-}*/
+}
