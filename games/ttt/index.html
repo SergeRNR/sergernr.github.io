@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <!-- <script src="/assets/fabric.min.js"></script> -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        background-color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #fff;
+      }
+      .layout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .controls {
+        display: flex;
+        margin-bottom: 32px;
+      }
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+        padding: 0;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      .button:active {
+        opacity: 0.7;
+        transform: scale(0.99);
+      }
+      .canvas-container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        transform: scale(1.2);
+      }
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+      }
+      .player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .name {
+        font-size: 16px;
+      }
+      .score {
+        margin-top: 8px;
+        font-size: 20px;
+      }
+      .message {
+        height: 20px;
+        margin-top: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="container">
+        <div class="controls">
+          <button
+            class="button"
+            data-click="restartGame"
+            aria-label="Restart Game"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+              >
+                <path d="M12 3a9 9 0 1 1-5.657 2" />
+                <path d="M3 4.5h4v4" />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <canvas
+          id="canvas"
+          width="300"
+          height="300"
+          style="width: 450px; height: 450px"
+        ></canvas>
+        <div class="stats">
+          <div class="player">
+            <div class="name">Player 1 (X)</div>
+            <div class="score" data-bind="scoreX">0</div>
+          </div>
+          <div class="player">
+            <div class="name">Draw</div>
+            <div class="score" data-bind="scoreD">0</div>
+          </div>
+          <div class="player">
+            <div class="name">Player 2 (O)</div>
+            <div class="score" data-bind="scoreO">0</div>
+          </div>
+        </div>
+        <div class="message" data-bind="message"></div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
