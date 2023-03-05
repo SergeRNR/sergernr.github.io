@@ -14,8 +14,8 @@
       }
       body {
         background-color: #000;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
+        font-family: Chalkboard, 'Comic Sans MS', Arial, Helvetica, sans-serif;
+        font-size: 16px;
         color: #fff;
       }
       .layout {
@@ -24,21 +24,26 @@
         justify-content: center;
         height: 100%;
       }
+      .container {
+        width: 360px;
+      }
       .controls {
         display: flex;
-        margin-bottom: 32px;
+        justify-content: space-between;
+        margin-bottom: 40px;
       }
       .button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
         height: 40px;
-        margin-right: 16px;
         padding: 0;
         border: 1px solid #fff;
         border-radius: 4px;
         background-color: transparent;
+        font-family: inherit;
+        font-size: 18px;
+        color: inherit;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -47,27 +52,38 @@
         opacity: 0.7;
         transform: scale(0.99);
       }
+      .button-icon {
+        width: 40px;
+      }
+      .button-text {
+        padding: 0 8px;
+      }
       .canvas-container {
-        margin-top: 60px;
-        margin-bottom: 60px;
+        /* 60px scaling area + 40px bottom margin */
+        margin-bottom: 100px;
         transform: scale(1.2);
+        transform-origin: top left;
       }
       .stats {
         display: flex;
-        justify-content: space-between;
-        margin-top: 32px;
       }
-      .player {
+      .result {
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex: 1;
+        opacity: 0.6;
+        transition: opacity 150ms linear;
+      }
+      .result.active {
+        opacity: 1;
       }
       .name {
-        font-size: 16px;
+        font-size: 18px;
       }
       .score {
         margin-top: 8px;
-        font-size: 20px;
+        font-size: 24px;
       }
       .message {
         height: 20px;
@@ -83,7 +99,7 @@
       <div class="container">
         <div class="controls">
           <button
-            class="button"
+            class="button button-icon"
             data-click="restartGame"
             aria-label="Restart Game"
           >
@@ -105,6 +121,15 @@
               </g>
             </svg>
           </button>
+          <button
+            class="button button-text"
+            style="width: 95px"
+            data-click="switchMode"
+            data-bind="modeButtonText"
+            aria-label="Restart Game"
+          >
+            2 players
+          </button>
         </div>
         <canvas
           id="canvas"
@@ -113,22 +138,22 @@
           style="width: 450px; height: 450px"
         ></canvas>
         <div class="stats">
-          <div class="player">
-            <div class="name">Player 1 (X)</div>
+          <div class="result" data-classname="classX">
+            <div class="name" data-bind="playerName">Player 1 (X)</div>
             <div class="score" data-bind="scoreX">0</div>
           </div>
-          <div class="player">
+          <div class="result">
             <div class="name">Draw</div>
             <div class="score" data-bind="scoreD">0</div>
           </div>
-          <div class="player">
-            <div class="name">Player 2 (O)</div>
+          <div class="result" data-classname="classO">
+            <div class="name" data-bind="opponentName">Player 2 (O)</div>
             <div class="score" data-bind="scoreO">0</div>
           </div>
         </div>
         <div class="message" data-bind="message"></div>
       </div>
     </div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="../dist/main.js"></script>
   </body>
 </html>
