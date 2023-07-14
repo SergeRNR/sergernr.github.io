@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Sergey Melnikov</title>
     <meta charset="UTF-8" />
@@ -6,6 +7,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no"
     />
+    <meta
+      name="description"
+      content="Senior full-stack web developer with 10+ years of experience designing and building responsive web and mobile apps."
+    />
+    <meta property="og:title" content="Sergey Melnikov - full-stack web developer." />
+    <meta
+      property="og:description"
+      content="Senior full-stack web developer with 10+ years of experience designing and building responsive web and mobile apps."
+    />
+    <meta property="og:image" content="/assets/SM.png" />
+    <meta property="og:site_name" content="Sergey Melnikov" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sergernr.github.io/" />
     <meta name="theme-color" content="#1f1f1f" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <link
@@ -59,7 +73,12 @@
     <div id="app" class="layout">
       <aside>
         <div class="sticky-content">
-          <img class="photo" src="/assets/SM.png" onload="this.style.opacity=1" />
+          <img
+            class="photo"
+            src="/assets/SM.png"
+            alt="Sergey Melnikov"
+            onload="this.style.opacity=1"
+          />
           <div class="info">
             <a
               v-for="contact in contacts"
