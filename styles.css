@@ -296,3 +296,25 @@ section ul {
     filter: brightness(0.8);
   }
 }
+
+/* TWEAKS */
+
+aside {
+  display: none;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+article {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+section ul {
+  margin-top: 0.5rem;
+}

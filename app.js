@@ -104,9 +104,9 @@ createApp({
       ],
       experience: [
         {
-          company: 'GEO Telemedicine',
-          location: 'Minsk & Tbilisi, Georgia',
-          period: '10/2019 - Present',
+          company: 'Telesphorus',
+          location: 'Minsk',
+          period: '10/2019 - 01/2022',
           position: 'Lead frontend developer',
           description: `One of the industry leaders with its own POS System, ERP and B2C e-commerce platform.
             I'm responsible for the frontend side of our B2C e-commerce platform and other internal projects.`,
@@ -153,13 +153,25 @@ createApp({
           ],
         },
         {
-          company: 'Belkaspian, Krafttrans',
+          company: 'Belkaspian Ltd.',
           location: 'Minsk, Belarus',
-          period: '01/2009 - 05/2013',
+          period: '01/2012 - 05/2013',
           position: 'Transport & logistics manager',
-          description: `International freight forwarding & logistics companies.
-            When I saw the process of integration of a new Transportation Management System I understood how technologies are changing our lives.
-            I decided to became a part of IT world as a developer.`,
+          description: `International freight forwarding & logistics company.`,
+          responsibilities: [
+            'Operational activities (communication with customers and carriers, transport lookup, shipping monitoring, shipment documents management)',
+          ],
+        },
+        {
+          company: 'Krafttrans Ltd.',
+          location: 'Minsk, Belarus',
+          period: '01/2009 - 01/2012',
+          position: 'Transport & logistics manager',
+          description: `International freight forwarding & logistics company.`,
+          responsibilities: [
+            'Operational activities (communication with customers and carriers, transport lookup, shipping monitoring, shipment documents management)',
+            'Sales',
+          ],
         },
       ],
     };

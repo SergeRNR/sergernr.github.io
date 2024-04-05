@@ -231,7 +231,7 @@
         </div>
       </aside>
       <main>
-        <h1 class="name">Sergey Melnikov</h1>
+        <h1 class="name">Siarhei Melnikau</h1>
         <div class="summary">
           <div class="summary-item"></div>
           <div class="summary-item"></div>
@@ -239,14 +239,14 @@
         </div>
 
         <p>
-          Senior full-stack web developer with 10+ years of experience designing and building
+          Senior full-stack web developer with 11 years of experience designing and building
           responsive web and mobile apps. Proficient with JavaScript and Node.js, JS and CSS
           frameworks, with extensive knowledge of UX.
         </p>
-        <p>
+        <!-- <p>
           Seeking a responsible senior/lead web developer position with an opportunity for
           professional challenges.
-        </p>
+        </p> -->
 
         <div class="infobits">
           <a
@@ -351,7 +351,7 @@
           </div>
         </div>
 
-        <section>
+        <!-- <section>
           <h2>core competencies</h2>
           <div class="skills">
             <div
@@ -363,19 +363,28 @@
               {{skill.label}}
             </div>
           </div>
-        </section>
+        </section> -->
 
-        <section>
+        <!-- <section>
           <h4>I'm also familiar with</h4>
           <div class="chips">
             <div class="chip" v-for="technology in technologies">{{technology}}</div>
           </div>
-        </section>
+        </section> -->
 
         <section>
           <h2>work experience</h2>
           <article class="work" v-for="(work, index) in experience">
             <h4>{{work.position}}</h4>
+            <div v-if="work.company === 'Telesphorus'">
+              <div>
+                Smart POS Inc. (continued working on the same project under another contract)
+              </div>
+              <div class="period-location">
+                <span>01/2022 - Present</span>
+                <span>Tbilisi</span>
+              </div>
+            </div>
             <div>{{work.company}}</div>
             <div class="period-location">
               <span>{{work.period}}</span>
