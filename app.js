@@ -52,23 +52,23 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      location: 'Tbilisi, Georgia',
+      location: 'Valencia, Spain',
       contacts: [
         {
           label: 'rnrserge@gmail.com',
           link: 'mailto:rnrserge@gmail.com',
           icon: iconMail,
         },
-        {
-          label: '@SergeRNR',
-          link: 'https://t.me/SergeRNR',
-          icon: iconTG,
-        },
-        {
-          label: '+995 599 788 328 (WhatsApp)',
-          link: 'tel:+995599788328',
-          icon: iconPhone,
-        },
+        // {
+        //   label: '@SergeRNR',
+        //   link: 'https://t.me/SergeRNR',
+        //   icon: iconTG,
+        // },
+        // {
+        //   label: '+995 599 788 328 (WhatsApp)',
+        //   link: 'tel:+995599788328',
+        //   icon: iconPhone,
+        // },
         {
           label: 'LinkedIn',
           link: 'https://www.linkedin.com/in/sergemelnikov/',
@@ -84,10 +84,11 @@ createApp({
         { label: 'Team Leadership', icon: iconPeople },
       ],
       technologies: [
-        'Redux',
         'GraphQL',
         'Apollo GraphQL',
+        'Nest.js',
         'Next.js',
+        'Redux',
         'Vue.js',
         'AngularJS',
         'Webpack',
@@ -104,16 +105,17 @@ createApp({
       ],
       experience: [
         {
-          company: 'GEO Telemedicine',
-          location: 'Minsk & Tbilisi, Georgia',
+          company: 'Smart POS Inc.',
+          location: 'Remote',
           period: '10/2019 - Present',
           position: 'Lead frontend developer',
           description: `One of the industry leaders with its own POS System, ERP and B2C e-commerce platform.
             I'm responsible for the frontend side of our B2C e-commerce platform and other internal projects.`,
           responsibilities: [
             'Develop new features for e-commerce website (Frontend and and Backend for Frontend server in Node.js) with focus on quality, performance, user experience and security.',
-            'Develop React Native mobile app for iOS and Android with all functionality of the website.',
-            'Develop library of isomorphic JavaScript code with core functionality shared between app and website.',
+            'Launched React Native POS app for Android.',
+            'Launched React Native mobile app for iOS with all functionality of the website.',
+            'Develop library of isomorphic JavaScript code with core functionality shared by app and website.',
             'Participate in the analysis, definition, and scoping of new features.',
             'Ensure cross-browser compatibility.',
             'Improve SEO, analyze and optimize the website with PageSpeed tools.',
