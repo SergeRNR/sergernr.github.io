@@ -73,7 +73,8 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   padding-left: 2rem;
 }
 

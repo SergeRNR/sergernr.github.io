@@ -105,25 +105,22 @@ createApp({
       ],
       experience: [
         {
-          company: 'Smart POS Inc.',
+          company: 'Smart POS Inc. (IndicaOnline POS Software)',
           location: 'Remote',
           period: '10/2019 - Present',
           position: 'Lead frontend developer',
           description: `One of the industry leaders with its own POS System, ERP and B2C e-commerce platform.
-            I'm responsible for the frontend side of our B2C e-commerce platform and other internal projects.`,
+            I'm responsible for the frontend side of our B2C e-commerce platform and Android version of POS app.`,
           responsibilities: [
-            'Develop new features for e-commerce website (Frontend and and Backend for Frontend server in Node.js) with focus on quality, performance, user experience and security.',
-            'Launched React Native POS app for Android.',
-            'Launched React Native mobile app for iOS with all functionality of the website.',
-            'Develop library of isomorphic JavaScript code with core functionality shared by app and website.',
-            'Participate in the analysis, definition, and scoping of new features.',
-            'Ensure cross-browser compatibility.',
-            'Improve SEO, analyze and optimize the website with PageSpeed tools.',
-            'Analyze technical solutions of competitrors in order to improve existing features and push development of the platform.',
-            'Converted website to a fully compliant Progressive Web App.',
-            'Analyzed sources and strategy of DDoS attacks and helped to elaborate mechanism of the defence (AWS WAF rules, NGINX rate limit).',
-            'Mentor colleages on technical issues and modern web development best-practices and solutions.',
-            'Work on telemedicine project on Electron platform, with live video calls and integration with hardware devices using Bluetooth API, WebRTC and WebUSB.',
+            'Led the development of a large-scale e-commerce platform serving hundreds of companies with thousands of stores and delivery points.',
+            'Contributed to scaling daily orders from 400 to 5000, working closely with backend and marketing teams to support growth.',
+            'Re-engineered the UI, migrating the project from JavaScript to TypeScript and adopting React Hooks, improving loading speed, maintainability, and stability.',
+            'Helped accelerate feature delivery speed, enhancing the platform’s scalability and user experience.',
+            'Led the end-to-end development of a React Native app that replicated the full functionality of the web version of our e-commerce platform, enabling a seamless experience for 80% of users who make purchases via mobile.',
+            'Developed and implemented an isomorphic JavaScript library, allowing code sharing between the web and mobile apps, significantly improving development speed and code quality.',
+            'Led the end-to-end development of a React Native POS app, bringing the functionality of an existing iOS app to Android.',
+            'Delivered an MVP in one year with a team of three, implementing 50% of the features from a 12-year-old product.',
+            'Worked on telemedicine project on Electron platform, with live video calls and integration with hardware devices using Bluetooth API, WebRTC and WebUSB.',
           ],
         },
         {
@@ -135,10 +132,10 @@ createApp({
             It offers dedicated development teams for startups and large-scale enterprises.
             I worked as full-stack developer across several customer projects in different domains.`,
           responsibilities: [
-            'Developed frontend and backend of several projects with various architecture, frameworks and technologies.',
-            "Worked directly with clients and/or with clients' team.",
-            'Led a team of three developers.',
-            'Mentored junior web developers and students during JavaScipt Labs.',
+            'Developed both the frontend and backend of several projects, utilizing various architectures, frameworks, and technologies.',
+            'Collaborated directly with clients and/or their teams to deliver tailored solutions.',
+            'Led a team of three developers, overseeing project progress and ensuring high-quality results.',
+            'Mentored junior web developers and students during JavaScript Labs, fostering growth and learning.',
           ],
         },
         {
@@ -149,9 +146,9 @@ createApp({
           description: `A software development company that offers outsourcing & outstaffing services for full-cycle development.
             I developed company's products and outsourcing projects.`,
           responsibilities: [
-            'Contributed to development of several components of core company product.',
-            'Helped to integrate our products into client programs.',
-            'Worked on several outsourcing projects as full-stack developer.',
+            'Contributed to the development of several key components of the company’s core product.',
+            'Assisted in integrating our products into client systems and applications.',
+            'Worked on various outsourcing projects as a full-stack developer.',
           ],
         },
         {
