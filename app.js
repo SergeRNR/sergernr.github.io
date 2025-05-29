@@ -111,7 +111,7 @@ createApp({
           company: 'Smart POS Inc. (IndicaOnline POS Software)',
           location: 'Remote',
           period: '10/2019 - Present',
-          position: 'Lead frontend developer',
+          position: 'Lead Frontend Engineer',
           description: `One of the industry leaders with its own POS System, ERP and B2C e-commerce platform.
             I'm responsible for the frontend side of our B2C e-commerce platform and Android version of POS app.`,
           responsibilities: [
@@ -154,7 +154,7 @@ createApp({
           company: 'iTechArt (now Vention)',
           location: 'Minsk, Belarus',
           period: '06/2015 - 10/2019',
-          position: 'Senior web developer, Web developer',
+          position: 'Senior Frontend Engineer, Frontend Engineer',
           description: `A global custom software development company.
             It offers dedicated development teams for startups and large-scale enterprises.
             I worked as full-stack developer across several customer projects in different domains.`,
@@ -162,7 +162,7 @@ createApp({
             'Developed both the frontend and backend of several projects, utilizing various architectures, frameworks, and technologies.',
             'Collaborated directly with clients and/or their teams to deliver tailored solutions.',
             'Led a team of three developers, overseeing project progress and ensuring high-quality results.',
-            'Mentored junior web developers and students during JavaScript Labs, fostering growth and learning.',
+            'Mentored junior developers and students during JavaScript Labs, fostering growth and learning.',
           ],
           stack: [
             'React',
@@ -184,7 +184,7 @@ createApp({
           company: 'XB Software',
           location: 'Minsk, Belarus',
           period: '05/2013 - 06/2015',
-          position: 'Web developer',
+          position: 'Frontend Engineer',
           description: `A software development company that offers outsourcing & outstaffing services for full-cycle development.
             I developed company's products and outsourcing projects.`,
           responsibilities: [
