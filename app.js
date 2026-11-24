@@ -52,7 +52,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      location: 'Valencia, Spain',
+      location: 'Spain',
       contacts: [
         {
           label: 'rnrserge@gmail.com',
@@ -108,12 +108,17 @@ createApp({
       ],
       experience: [
         {
+          company: 'SOFTSWISS',
+          period: '08/2025 - Present',
+          position: 'Frontend Team Lead',
+        },
+        {
           company: 'Smart POS Inc. (IndicaOnline POS Software)',
-          location: 'Remote',
-          period: '10/2019 - Present',
+          location: 'Tbilisi, Georgia (Hybrid)',
+          period: '10/2019 - 08/2025',
           position: 'Lead Frontend Engineer',
           description: `One of the industry leaders with its own POS System, ERP and B2C e-commerce platform.
-            I'm responsible for the frontend side of our B2C e-commerce platform and Android version of POS app.`,
+            I was responsible for the frontend side of our B2C e-commerce platform and Android version of POS app.`,
           responsibilities: [
             'Led the development of a large-scale e-commerce platform serving hundreds of companies with thousands of stores and delivery points.',
             'Contributed to scaling daily orders from 400 to 5000, working closely with backend and marketing teams to support growth.',
@@ -181,6 +186,19 @@ createApp({
           ],
         },
         {
+          company: 'Turvo',
+          location: 'Remote',
+          period: '12/2016 - 09/2019',
+          position: 'Frontend Engineer',
+          description: `Outstaffed full-time via iTechArt Group.
+            Collaborative cloud TMS (Series B $60M in 2018, acquired by Lineage in 2022).`,
+          responsibilities: [
+            'Part of the team that built the entire frontend of Turvo’s cloud TMS — the client had no in-house frontend engineers. Contributed to most of the operator-facing screens of the product over almost three years: shipments, shipment profile, customers, carriers, carrier onboarding wizard.',
+            'Designed API contracts together with Turvo’s backend team and built the UI on top of them — daily work with the data model of a TMS: shipments, stops, carriers, statuses, documents, and the events that move them.',
+            'Took features from a single product owner through design and requirements to production, in a product where every screen is where a broker or dispatcher does manual work — exception handling, status chasing, document gaps — the exact places an agent layer is now being built.',
+          ],
+        },
+        {
           company: 'XB Software',
           location: 'Minsk, Belarus',
           period: '05/2013 - 06/2015',
@@ -209,15 +227,37 @@ createApp({
           ],
         },
         {
-          company: 'Belkaspian, Krafttrans',
+          company: 'Belkaspian',
           location: 'Minsk, Belarus',
-          period: '01/2009 - 05/2013',
-          position: 'Transport & logistics manager',
-          description: `International freight forwarding & logistics companies.
-            Witnessing the integration of a new Transportation Management System sparked 
-            my interest in how technology transforms everyday operations and improves 
-            lives. This experience inspired me to transition into the IT field and 
-            pursue a career as a developer.`,
+          period: '12/2011 - 05/2013',
+          position: 'Freight Forwarder',
+          description: `LTL/Groupage (Europe & Türkiye → Belarus & Russia).
+            Third hire into a newly created forwarding department built on subcontracted carriers,
+            and the first to run groupage there. Set up the LTL/groupage line from zero inside an
+            asset-based carrier: carrier sourcing, consolidation rules, document flow, tracking and
+            exception handling for cross-border loads.`,
+        },
+        {
+          company: 'Krafttrans',
+          location: 'Minsk, Belarus',
+          period: '05/2010 - 12/2011',
+          position: 'Freight Forwarder',
+          description: `LTL/Groupage (Europe & Türkiye → Belarus & Russia).
+            Managed ~40 loads per month end-to-end on subcontracted carriers: sourcing capacity,
+            consolidation, carrier instructions, tracking, documents and problem resolution across
+            borders — late pickups, missing documents, carrier no-shows, customs holds, re-routing —
+            and the phone calls and emails that still run most of European road freight.`,
+        },
+        {
+          company: 'Krafttrans',
+          location: 'Minsk, Belarus',
+          period: '01/2009 - 05/2010',
+          position: 'Sales Manager',
+          description: `International Freight Services.
+            Sold forwarding services from zero to Russian and European shippers, working with
+            European clients in French: cold outreach, quoting, closing and account management.
+            Learned how LSPs win customers, what they are actually paid for, and why operations has
+            to deliver on what sales promised.`,
         },
       ],
     };

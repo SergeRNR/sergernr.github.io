@@ -254,7 +254,15 @@ section ul {
 	}
 }
 
+@page {
+	size: A4;
+}
+
 @media print {
+	html,
+	body {
+		font-size: 15px;
+	}
 	h2 {
 		margin-bottom: 1rem;
 	}
@@ -309,6 +317,20 @@ section ul {
 	}
 	.print-hidden {
 		display: none;
+	}
+
+	/* page breaks */
+	h2,
+	h4,
+	.work > h4 + div,
+	.period-location {
+		break-after: avoid;
+	}
+	.skills,
+	.chips,
+	li,
+	main > section:last-child {
+		break-inside: avoid;
 	}
 }
 
